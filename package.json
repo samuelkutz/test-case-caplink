@@ -1,0 +1,21 @@
+{
+  "name": "test-case-caplink",
+  "version": "1.0.0",
+  "description": "Script que consome a API JSONPlaceholder para gerar um relatório em Excel/PDF que podem ser automatizados para envio por e-mail.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node ./test/test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "express": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "pdfkit": "^0.17.1",
+    "xlsx": "^0.18.5"
+  },
+  "type": "module"
+}
