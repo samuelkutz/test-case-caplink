@@ -18,7 +18,7 @@ Este projeto tem como objetivo apresentar um sistema capaz de realizar consultas
 {
   "to": "email@teste.com",
   "subject": "Assunto do e-mail",
-  "reportType": "PDF" | "Excel",
+  "reportType": "PDF" ou "Excel",
   "body": "Texto do corpo do e-mail"
 }
 ```
@@ -149,7 +149,7 @@ Certifique-se de ter o [Node.js](https://nodejs.org/) instalado na versão LTS m
 
 * **Validações insuficientes:**
 
-  * A validação de entrada é rigorosa e cobre múltiplos cenários de falha, mas não é completa. Uma das considerações a ser feita é a mudança para linguagens tipadas, como TypeScript, isso reduziria a quantidade de validações consideravelmente, na minha visão.
+  * A validação de entrada é rigorosa e cobre múltiplos cenários de falha, mas não é completa. Uma das considerações a ser feita é a mudança para linguagens tipadas, como TypeScript, isso reduziria a quantidade de validações consideravelmente e diminuiria a chance de bugs, que no presente projeto, é uma chance consideravel.
 
 * **Envio de e-mail:**
 
@@ -163,3 +163,7 @@ Certifique-se de ter o [Node.js](https://nodejs.org/) instalado na versão LTS m
 * O sistema foi projetado com intenções de escalabilidade, porém algumas questões sobre sobre envio do relatório prevalece: salvar no disco rígido não deve ser mantido.
 
 * O uso de testes foi visto como uma necessidade diante da complexidade, apenas testes de "console.log" não estavam ajudando.
+
+* Integração com envio de e-mails é uma possibilidade viável.
+
+* 
