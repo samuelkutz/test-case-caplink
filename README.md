@@ -165,5 +165,3 @@ Certifique-se de ter o [Node.js](https://nodejs.org/) instalado na versão LTS m
 * O uso de testes foi visto como uma necessidade diante da complexidade, apenas testes de "console.log" não estavam ajudando.
 
 * Integração com envio de e-mails é uma possibilidade viável.
-
-* 
