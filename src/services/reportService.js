@@ -12,7 +12,7 @@ import fs from "fs"
 async function getAllUsers() {
     // OBS: o ideal seria algo tipo GET /users?fields=id,name (evitaria exposição de dados desnecessários e imagino que seria menos custoso), mas a JSONplaceholder não suporta
     try {
-        const response = await axios.get("https://jsonplaceholder.typicode.com/users")
+        const response = await axios.get("https://jsonplaceholder.typicode.com/users", { timeout: 5000 })
         return response.data.map(({ id, name }) => ({ id, name })) // aqui, ({ id, name }) => ({ id, name }) é um destructuring: desmonta os 2 parâmetros do objeto e monta um novo só com eles (mágica)
     } catch(error) {
         console.error("Erro na requisição de usuários via getUser: ", error.message || error)
@@ -38,7 +38,7 @@ async function getPosts(userIDs) {
                userIDs = [userIDs]
         }
         
-        const response = await axios.get("https://jsonplaceholder.typicode.com/posts/")
+        const response = await axios.get("https://jsonplaceholder.typicode.com/posts/", { timeout: 5000 })
         const posts = response.data // é um array
         const postsByUserIDs = posts.filter(post => userIDs.includes(post.userId)) // nesta linha, aplicamos um filtro que apenas pega objetos (posts) que tem ID contido em userIDs
 
